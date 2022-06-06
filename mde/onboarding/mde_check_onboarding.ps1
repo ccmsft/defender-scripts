@@ -94,13 +94,13 @@ function Get-MDEDeviceOnboardingState {
     .SYNOPSIS
         Gets the onboarded state of a provided device hostname from the MDE API
     .PARAMETER HostNames
-        The device hostnames to query.
+        String array of device hostnames to query.
     .OUTPUTS
         System.String. JSON-formatted string with key:value pairs of hostname:onboardingStatus.
     .LINK
         https://docs.microsoft.com/microsoft-365/security/defender-endpoint/get-machine-by-id
     .EXAMPLE
-        Get-MDEDeviceOnboardingState -Hostname $myDeviceHostname
+        Get-MDEDeviceOnboardingState -HostNames $hostnamesArray
     #>
     param (
         [Parameter(Mandatory)]
